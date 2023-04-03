@@ -78,6 +78,15 @@ function startStopRecording() {
         startStopState = "started";
         startBtn.innerText = "Stop";
         startBtn.classList.add("running");
+        leftInputClickCount = 0;
+        leftInputErrCount = 0;
+        rightInputClickCount = 0;
+        rightInputKeypressCount = 0;
+        leftInputKeypressCount = 0;
+        rightInputKeypressErrCount = 0;
+        leftInputKeypressErrCount = 0;
+        rightInputClickErrCount = 0;
+        datePickerOpenCount = 0;
     }
     else {
         endTime = new Date();
@@ -86,7 +95,6 @@ function startStopRecording() {
         startBtn.classList.remove("running");
     }
     updateData();
-
 }
 
 function countClicksInLeft(event) {
