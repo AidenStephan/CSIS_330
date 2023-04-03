@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
     <div id="pageHeader">
@@ -18,18 +19,18 @@
     <div class="mainContent">
         <div id="dateInput">
             <h2>Date Input</h2>
-            <p><button id="startButton" type="button">Start</button><button>Reset Page</button></p>
+            <p><button id="startButton" type="button">Start</button><button id="resetButton">Reset Page</button></p>
         </div>
         <div id="flexContainer">
             <div class="inputTile" id="leftInputTile">
                 <label for="start">Input Today's Date:</label>
 <!--                <input type="text" placeholder="Click here" id="start" name="trip-start" min="1900-01-01" max="2023-12-31"><br><br>-->
-                <input type="text" id="start" name="today" value="01/01/2000" /><br><br>
+                <input type="text" id="start" name="today" value="01/01/2022" /><br><br>
                 <div>
                     <button id="leftShowDataButton">Show Analysis</button>
                     <div hidden id="leftDataDiv">
                         <p><b>Clicks: </b><span id="leftInputClickCount"></span></p>
-                        <p><b>Keystrokes: </b>0</p>
+                        <p><b>Keystrokes: </b><span id="leftInputKeystrokeCount"></span></p>
                         <p><b>Errors: </b><span id="leftInputErrorCount"></span></p>
                         <p><b>Completion Time: </b><span id="leftInputCompletionTime"></span></p>
                     </div>
@@ -54,16 +55,20 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
-        $(function() {
-            $('input[name="today"]').daterangepicker({
-                singleDatePicker: true,
-                showDropdowns: true,
-                minYear: 1901,
-                maxYear: parseInt(moment().format('YYYY'),10)
-            });
-        });
+        flatpickr(document.getElementById("start"));
     </script>
+<!--    <script>-->
+<!--        $(function() {-->
+<!--            $('input[name="today"]').daterangepicker({-->
+<!--                singleDatePicker: true,-->
+<!--                showDropdowns: true,-->
+<!--                minYear: 1901,-->
+<!--                maxYear: parseInt(moment().format('YYYY'),10)-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
 </body>
 </html>
 
