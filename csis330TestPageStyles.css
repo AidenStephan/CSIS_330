@@ -82,7 +82,7 @@ button {
     border-radius: var(--header-rad);
     font-family: 'M PLUS Rounded 1c', serif;
     font-size: 12pt;
-    width: 10vw;
+    width: 43%;
 }
 
 button.running {
