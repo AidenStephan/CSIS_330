@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aiden Stephan</title>
-    <link rel="stylesheet" href="landingPageStyles.css">
+    <title>CSIS 330 Project</title>
+    <link rel="stylesheet" href="csis330TestPageStyles.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@300;500&family=M+PLUS+Rounded+1c:wght@300;700&family=Rajdhani:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@300&family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@300;500&family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
@@ -12,54 +12,41 @@
 </head>
 <body>
     <div id="pageHeader">
-        <h1>Aiden <span id="lastName">Stephan</span></h1>
+        <h1>CSIS 330: Assignment 11</span></h1>
     </div>
     <div class="mainContent">
-        <div id="CSIS304">
-            <h2>CSIS 304</h2>
+        <div id="dateInput">
+            <h2>Date Input</h2>
+            <p><button id="startButton" type="button">Start</button><button>Reset Page</button></p>
         </div>
-        <h3>Projects</h3>
-        <div id="mainContentContainer">
-
-            <a class="projectCard" href="BugattiBolideHome.html">
-                <div class="projectCardContents">
-                    <h3>Project 1</h3>
-                    <p>
-                        <span class="asgnTitle">Assignment:</span>
-                        <span>Personal Site</span>
-                    </p>
+        <div id="flexContainer">
+            <div class="inputTile" id="leftInputTile">
+                <label for="start">Input Today's Date:</label>
+                <input type="date" id="start" name="trip-start" value="2018-07-22" min="1900-01-01" max="2023-12-31"><br><br>
+                <div>
+                    <button>Show Analysis</button>
+                    <div hidden>
+                        <p>Clicks</p>
+                        <p>Keystrokes</p>
+                        <p>Completion Time</p>
+                    </div>
                 </div>
-            </a>
-            <a class="projectCard" href="CSSZenGarden.html">
-                <div class="projectCardContents">
-                    <h3>Project 2</h3>
-                    <p>
-                        <span class="asgnTitle">Assignment:</span>
-                        <span>CSS Zen Garden</span>
-                    </p>
+            </div>
+            <div class="inputTile" id="rightInputTile">
+                <label for="fname">Input Today's Date:</label>
+                <input type="text" id="fname" name="fname" placeholder="dd-mm-yyyy"><br><br>
+                <div>
+                    <button>Show Analysis</button>
+                    <div hidden>
+                        <p>Clicks</p>
+                        <p>Keystrokes</p>
+                        <p>Completion Time</p>
+                    </div>
                 </div>
-            </a>
-            <a class="projectCard" href="GalleryHome.html">
-                <div class="projectCardContents">
-                    <h3>Project 3`</h3>
-                    <p>
-                        <span class="asgnTitle">Assignment:</span>
-                        <span>JavaScript Project</span>
-                    </p>
-                </div>
-            </a>
-            <a class="projectCard" href="FactCentralHome.html">
-                <div class="projectCardContents">
-                    <h3>Project 4</h3>
-                    <p>
-                        <span class="asgnTitle">Assignment:</span>
-                        <span>Final Project</span>
-                    </p>
-                </div>
-            </a>
+            </div>
         </div>
     </div>
-    <script src="landingPageFunction.js"></script>
+    <script src="csis330TestPageFunction.js"></script>
 </body>
 </html>
 
